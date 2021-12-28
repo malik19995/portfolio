@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:potrtfolio/Widget/CustomText.dart';
+import 'package:portfolio/Widget/CustomText.dart';
 
 class FeatureProject extends StatelessWidget {
   final String imagePath;
@@ -9,16 +9,16 @@ class FeatureProject extends StatelessWidget {
   final String tech1;
   final String tech2;
   final String tech3;
-  final Function ontab;
+  final Function()? ontab;
 
   FeatureProject(
-      {this.imagePath,
-      this.ontab,
-      this.projectDesc,
-      this.projectTitle,
-      this.tech1,
-      this.tech2,
-      this.tech3});
+      {required this.imagePath,
+      required this.ontab,
+      required this.projectDesc,
+      required this.projectTitle,
+      required this.tech1,
+      required this.tech2,
+      required this.tech3});
 
   @override
   Widget build(BuildContext context) {

@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:potrtfolio/Model/Method.dart';
-import 'package:potrtfolio/UI/About.dart';
-import 'package:potrtfolio/UI/FeatureProject.dart';
-import 'package:potrtfolio/UI/Work.dart';
-import 'package:potrtfolio/Widget/AppBarTitle.dart';
-import 'package:potrtfolio/Widget/CustomText.dart';
-import 'package:potrtfolio/Widget/MainTiitle.dart';
-import 'package:potrtfolio/Widget/OSImages.dart';
+import 'package:portfolio/Model/Method.dart';
+import 'package:portfolio/UI/About.dart';
+import 'package:portfolio/UI/FeatureProject.dart';
+import 'package:portfolio/UI/Work.dart';
+import 'package:portfolio/Widget/AppBarTitle.dart';
+import 'package:portfolio/Widget/CustomText.dart';
+import 'package:portfolio/Widget/MainTiitle.dart';
+import 'package:portfolio/Widget/OSImages.dart';
 import 'package:scroll_to_index/scroll_to_index.dart';
 
 class HomePage extends StatefulWidget {
@@ -18,14 +18,14 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   Method method = Method();
-  AutoScrollController _autoScrollController;
+  AutoScrollController? _autoScrollController;
   final scrollDirection = Axis.vertical;
 
   bool isExpaned = true;
 
   bool get _isAppBarExpanded {
-    return _autoScrollController.hasClients &&
-        _autoScrollController.offset > (160 - kToolbarHeight);
+    return _autoScrollController!.hasClients &&
+        _autoScrollController!.offset > (160 - kToolbarHeight);
   }
 
   @override
@@ -55,15 +55,15 @@ class _HomePageState extends State<HomePage> {
   }
 
   Future _scrollToIndex(int index) async {
-    await _autoScrollController.scrollToIndex(index,
-        preferPosition: AutoScrollPosition.begin);
-    _autoScrollController.highlight(index);
+    await _autoScrollController!
+        .scrollToIndex(index, preferPosition: AutoScrollPosition.begin);
+    _autoScrollController!.highlight(index);
   }
 
-  Widget _wrapScrollTag({int index, Widget child}) {
+  Widget _wrapScrollTag({required int index, required Widget child}) {
     return AutoScrollTag(
       key: ValueKey(index),
-      controller: _autoScrollController,
+      controller: _autoScrollController!,
       index: index,
       child: child,
     );
@@ -330,8 +330,6 @@ class _HomePageState extends State<HomePage> {
                                 ],
                               ),
 
-                              
-
                               //About Me
                               _wrapScrollTag(
                                 index: 0,
@@ -342,10 +340,7 @@ class _HomePageState extends State<HomePage> {
                               ),
 
                               //Where I've Worked
-                              _wrapScrollTag(
-                                index: 1,
-                                child:Work()
-                              ),
+                              _wrapScrollTag(index: 1, child: Work()),
                               SizedBox(
                                 height: size.height * 0.10,
                               ),
