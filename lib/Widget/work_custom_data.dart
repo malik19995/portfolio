@@ -5,11 +5,7 @@ class WorkCustomData extends StatelessWidget {
   final String subTitle;
   final String duration;
 
-  const WorkCustomData(
-      {Key? key,
-      required this.title,
-      required this.subTitle,
-      required this.duration})
+  const WorkCustomData({Key key, this.title, this.subTitle, this.duration})
       : super(key: key);
   @override
   Widget build(BuildContext context) {
