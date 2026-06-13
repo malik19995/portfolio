@@ -5,8 +5,11 @@ class WorkCustomData extends StatelessWidget {
   final String subTitle;
   final String duration;
 
-  const WorkCustomData({Key key, this.title, this.subTitle, this.duration})
-      : super(key: key);
+  const WorkCustomData(
+      {super.key,
+      required this.title,
+      required this.subTitle,
+      required this.duration});
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -28,7 +31,7 @@ class WorkCustomData extends StatelessWidget {
           subTitle,
           style: TextStyle(
             fontSize: 13.0,
-            color: Color(0xffCCD6F6).withOpacity(0.5),
+            color: Color(0xffCCD6F6).withValues(alpha: 0.5),
             fontWeight: FontWeight.w600,
           ),
         ),
@@ -39,7 +42,7 @@ class WorkCustomData extends StatelessWidget {
           duration,
           style: TextStyle(
             fontSize: 12.0,
-            color: Color(0xffCCD6F6).withOpacity(0.5),
+            color: Color(0xffCCD6F6).withValues(alpha: 0.5),
             fontWeight: FontWeight.w700,
           ),
         ),

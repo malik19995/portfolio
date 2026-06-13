@@ -75,7 +75,7 @@ class _WorkState extends State<Work> {
                             children: [
                               CircleAvatar(
                                 backgroundColor: Colors.pink,
-                                child: FaIcon(FontAwesomeIcons.laptopHouse,
+                                child: FaIcon(FontAwesomeIcons.houseLaptop,
                                     color: Colors.white),
                               ),
                               CircleAvatar(
@@ -90,7 +90,7 @@ class _WorkState extends State<Work> {
                               ),
                               CircleAvatar(
                                 backgroundColor: Colors.deepOrange,
-                                child: FaIcon(FontAwesomeIcons.coffee,
+                                child: FaIcon(FontAwesomeIcons.mugSaucer,
                                     color: Colors.white),
                               ),
                               CircleAvatar(

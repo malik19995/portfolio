@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:portfolio/Model/Method.dart';
@@ -17,7 +16,7 @@ class _MobileHomeState extends State<MobileHome> {
       children: [
         Icon(
           Icons.skip_next,
-          color: Color(0xff64FFDA).withOpacity(0.6),
+          color: Color(0xff64FFDA).withValues(alpha: 0.6),
           size: 14.0,
         ),
         SizedBox(
@@ -106,7 +105,7 @@ class _MobileHomeState extends State<MobileHome> {
               CustomText(
                 text: "I build things for the Android and web.",
                 textsize: 42.0,
-                color: Color(0xffCCD6F6).withOpacity(0.6),
+                color: Color(0xffCCD6F6).withValues(alpha: 0.6),
                 fontWeight: FontWeight.w700,
               ),
               SizedBox(
@@ -312,7 +311,7 @@ class _MobileHomeState extends State<MobileHome> {
                       Container(
                         height: size.height * 0.5,
                         width: size.width * 0.6,
-                        color: Color(0xff61F9D5).withOpacity(0.5),
+                        color: Color(0xff61F9D5).withValues(alpha: 0.5),
                       ),
                     ],
                   ),
@@ -730,7 +729,7 @@ class _MobileHomeState extends State<MobileHome> {
                             "Although I'm currently looking for SDE-1 opportunities, my inbox is always open. Whether you have a question or just want to say hi, I'll try my best to get back to you!",
                             textAlign: TextAlign.center,
                             style: TextStyle(
-                              color: Colors.white.withOpacity(0.4),
+                              color: Colors.white.withValues(alpha: 0.4),
                               letterSpacing: 0.75,
                               fontSize: 16.0,
                             ),
@@ -803,7 +802,7 @@ class _MobileHomeState extends State<MobileHome> {
                   ),
                   IconButton(
                     icon: Icon(
-                      FontAwesomeIcons.twitter,
+                      FontAwesomeIcons.xTwitter,
                       color: Colors.white,
                       size: 15.0,
                     ),
@@ -838,7 +837,7 @@ class _MobileHomeState extends State<MobileHome> {
                   "Designed & Built by Tushar Nikam 💙 Flutter",
                   textAlign: TextAlign.center,
                   style: TextStyle(
-                    color: Colors.white.withOpacity(0.4),
+                    color: Colors.white.withValues(alpha: 0.4),
                     letterSpacing: 1.75,
                     fontSize: 14.0,
                   ),

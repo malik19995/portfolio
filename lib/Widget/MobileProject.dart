@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 
 class MobileProject extends StatelessWidget {
-  final Function() ontab;
+  final VoidCallback? ontab;
   final String image;
 
-  MobileProject({this.ontab, this.image});
+  const MobileProject({super.key, this.ontab, required this.image});
 
   @override
   Widget build(BuildContext context) {

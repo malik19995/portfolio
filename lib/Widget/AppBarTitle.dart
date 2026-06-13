@@ -4,9 +4,9 @@ class AppBarTitle extends StatelessWidget {
   final String text;
   //final Function ontab;
 
-  AppBarTitle({
-    this.text,
-    /*@required this.ontab*/
+  const AppBarTitle({
+    super.key,
+    required this.text,
   });
   @override
   Widget build(BuildContext context) {

@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:portfolio/Model/Method.dart';
 import 'package:portfolio/UI/About.dart';
@@ -40,13 +39,11 @@ class _HomePageState extends State<HomePage> {
                 ? setState(
                     () {
                       isExpaned = false;
-                      print('setState is called');
                     },
                   )
                 : {}
             : isExpaned != true
                 ? setState(() {
-                    print('setState is called');
                     isExpaned = true;
                   })
                 : {},
@@ -149,8 +146,11 @@ class _HomePageState extends State<HomePage> {
                               color: Color(0xff0A192F),
                               borderRadius: BorderRadius.circular(6.0),
                             ),
-                            child: FlatButton(
-                              hoverColor: Color(0xFF3E0449),
+                            child: TextButton(
+                              style: TextButton.styleFrom(
+                                foregroundColor: Color(0xff64FFDA),
+                                overlayColor: Color(0xFF3E0449),
+                              ),
                               onPressed: () {
                                 method.launchURL(
                                     "https://drive.google.com/file/d/1yHLcrN5pCUGIeT8SrwC2L95Lv0MVbJpx/view?usp=sharing");
@@ -192,7 +192,7 @@ class _HomePageState extends State<HomePage> {
                               method.launchURL("https://github.com/champ96k");
                             }),
                         IconButton(
-                            icon: FaIcon(FontAwesomeIcons.twitter),
+                            icon: FaIcon(FontAwesomeIcons.xTwitter),
                             color: Color(0xffffA8B2D1),
                             iconSize: 16.0,
                             onPressed: () {
@@ -226,7 +226,7 @@ class _HomePageState extends State<HomePage> {
                           child: Container(
                             height: size.height * 0.20,
                             width: 2,
-                            color: Colors.grey.withOpacity(0.4),
+                            color: Colors.grey.withValues(alpha: 0.4),
                           ),
                         ),
                       ],
@@ -270,7 +270,7 @@ class _HomePageState extends State<HomePage> {
                                     text:
                                         "I build things for the Android and web.",
                                     textsize: 56.0,
-                                    color: Color(0xffCCD6F6).withOpacity(0.6),
+                                    color: Color(0xffCCD6F6).withValues(alpha: 0.6),
                                     fontWeight: FontWeight.w700,
                                   ),
                                   SizedBox(
@@ -299,7 +299,7 @@ class _HomePageState extends State<HomePage> {
                                       method.launchEmail();
                                     },
                                     hoverColor:
-                                        Color(0xff64FFDA).withOpacity(0.2),
+                                        Color(0xff64FFDA).withValues(alpha: 0.2),
                                     borderRadius: BorderRadius.circular(4.0),
                                     child: Container(
                                       alignment: Alignment.center,
@@ -542,7 +542,7 @@ class _HomePageState extends State<HomePage> {
                                                   text: "Payment Getway",
                                                   textsize: 16.0,
                                                   color: Colors.white
-                                                      .withOpacity(0.4),
+                                                      .withValues(alpha: 0.4),
                                                   fontWeight: FontWeight.w700,
                                                   letterSpacing: 1.75,
                                                 ),
@@ -550,7 +550,7 @@ class _HomePageState extends State<HomePage> {
                                                   text: "Chat App",
                                                   textsize: 16.0,
                                                   color: Colors.white
-                                                      .withOpacity(0.4),
+                                                      .withValues(alpha: 0.4),
                                                   fontWeight: FontWeight.w700,
                                                   letterSpacing: 1.75,
                                                 ),
@@ -558,7 +558,7 @@ class _HomePageState extends State<HomePage> {
                                                   text: "Spotify Clone",
                                                   textsize: 16.0,
                                                   color: Colors.white
-                                                      .withOpacity(0.4),
+                                                      .withValues(alpha: 0.4),
                                                   fontWeight: FontWeight.w700,
                                                   letterSpacing: 1.75,
                                                 ),
@@ -566,7 +566,7 @@ class _HomePageState extends State<HomePage> {
                                                   text: "TODO App",
                                                   textsize: 16.0,
                                                   color: Colors.white
-                                                      .withOpacity(0.4),
+                                                      .withValues(alpha: 0.4),
                                                   fontWeight: FontWeight.w700,
                                                   letterSpacing: 1.75,
                                                 ),
@@ -611,7 +611,7 @@ class _HomePageState extends State<HomePage> {
                                                   text: "Spannish Audio",
                                                   textsize: 16.0,
                                                   color: Colors.white
-                                                      .withOpacity(0.4),
+                                                      .withValues(alpha: 0.4),
                                                   fontWeight: FontWeight.w700,
                                                   letterSpacing: 1.75,
                                                 ),
@@ -619,7 +619,7 @@ class _HomePageState extends State<HomePage> {
                                                   text: "Drumpad",
                                                   textsize: 16.0,
                                                   color: Colors.white
-                                                      .withOpacity(0.4),
+                                                      .withValues(alpha: 0.4),
                                                   fontWeight: FontWeight.w700,
                                                   letterSpacing: 1.75,
                                                 ),
@@ -627,7 +627,7 @@ class _HomePageState extends State<HomePage> {
                                                   text: "Currency Converter",
                                                   textsize: 16.0,
                                                   color: Colors.white
-                                                      .withOpacity(0.4),
+                                                      .withValues(alpha: 0.4),
                                                   fontWeight: FontWeight.w700,
                                                   letterSpacing: 1.75,
                                                 ),
@@ -635,7 +635,7 @@ class _HomePageState extends State<HomePage> {
                                                   text: "Calculator",
                                                   textsize: 16.0,
                                                   color: Colors.white
-                                                      .withOpacity(0.4),
+                                                      .withValues(alpha: 0.4),
                                                   fontWeight: FontWeight.w700,
                                                   letterSpacing: 1.75,
                                                 ),
@@ -680,7 +680,7 @@ class _HomePageState extends State<HomePage> {
                                                   text: "Prime Videos UI",
                                                   textsize: 16.0,
                                                   color: Colors.white
-                                                      .withOpacity(0.4),
+                                                      .withValues(alpha: 0.4),
                                                   fontWeight: FontWeight.w700,
                                                   letterSpacing: 1.75,
                                                 ),
@@ -688,7 +688,7 @@ class _HomePageState extends State<HomePage> {
                                                   text: "Tic Tac Toe Game",
                                                   textsize: 16.0,
                                                   color: Colors.white
-                                                      .withOpacity(0.4),
+                                                      .withValues(alpha: 0.4),
                                                   fontWeight: FontWeight.w700,
                                                   letterSpacing: 1.75,
                                                 ),
@@ -696,7 +696,7 @@ class _HomePageState extends State<HomePage> {
                                                   text: "Currency Converter UI",
                                                   textsize: 16.0,
                                                   color: Colors.white
-                                                      .withOpacity(0.4),
+                                                      .withValues(alpha: 0.4),
                                                   fontWeight: FontWeight.w700,
                                                   letterSpacing: 1.75,
                                                 ),
@@ -704,7 +704,7 @@ class _HomePageState extends State<HomePage> {
                                                   text: "Love Calculator",
                                                   textsize: 16.0,
                                                   color: Colors.white
-                                                      .withOpacity(0.4),
+                                                      .withValues(alpha: 0.4),
                                                   fontWeight: FontWeight.w700,
                                                   letterSpacing: 1.75,
                                                 ),
@@ -900,7 +900,7 @@ class _HomePageState extends State<HomePage> {
                                                 textAlign: TextAlign.center,
                                                 style: TextStyle(
                                                   color: Colors.white
-                                                      .withOpacity(0.4),
+                                                      .withValues(alpha: 0.4),
                                                   letterSpacing: 0.75,
                                                   fontSize: 17.0,
                                                 ),
@@ -963,7 +963,7 @@ class _HomePageState extends State<HomePage> {
                                       child: Text(
                                         "Designed & Built by Tushar Nikam 💙 Flutter",
                                         style: TextStyle(
-                                          color: Colors.white.withOpacity(0.4),
+                                          color: Colors.white.withValues(alpha: 0.4),
                                           letterSpacing: 1.75,
                                           fontSize: 14.0,
                                         ),
@@ -990,7 +990,7 @@ class _HomePageState extends State<HomePage> {
                           child: Text(
                             "tusharnikam2021@gmail.com",
                             style: TextStyle(
-                              color: Colors.grey.withOpacity(0.6),
+                              color: Colors.grey.withValues(alpha: 0.6),
                               letterSpacing: 3.0,
                               fontWeight: FontWeight.w700,
                             ),
@@ -1001,7 +1001,7 @@ class _HomePageState extends State<HomePage> {
                           child: Container(
                             height: 100,
                             width: 2,
-                            color: Colors.grey.withOpacity(0.4),
+                            color: Colors.grey.withValues(alpha: 0.4),
                           ),
                         ),
                       ],

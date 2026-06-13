@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio/Widget/work_custom_data.dart';
 
-class MobileWork extends StatelessWidget {
+class MobileWorkBox extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(

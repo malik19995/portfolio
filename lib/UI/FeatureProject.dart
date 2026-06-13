@@ -11,8 +11,9 @@ class FeatureProject extends StatelessWidget {
   final String tech3;
   final Function()? ontab;
 
-  FeatureProject(
-      {required this.imagePath,
+  const FeatureProject(
+      {super.key,
+      required this.imagePath,
       required this.ontab,
       required this.projectDesc,
       required this.projectTitle,
@@ -66,7 +67,7 @@ class FeatureProject extends StatelessWidget {
                           child: CustomText(
                             text: projectDesc,
                             textsize: 16.0,
-                            color: Colors.white.withOpacity(0.4),
+                            color: Colors.white.withValues(alpha: 0.4),
                             letterSpacing: 0.75,
                           ),
                         ),
@@ -111,7 +112,7 @@ class FeatureProject extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.end,
                       children: [
                         CustomText(
-                          text: tech1 == null ? "" : tech1,
+                          text: tech1,
                           textsize: 14,
                           color: Colors.grey,
                           letterSpacing: 1.75,
@@ -120,7 +121,7 @@ class FeatureProject extends StatelessWidget {
                           width: 16.0,
                         ),
                         CustomText(
-                          text: tech2 == null ? "" : tech2,
+                          text: tech2,
                           textsize: 14,
                           color: Colors.grey,
                           letterSpacing: 1.75,
@@ -129,7 +130,7 @@ class FeatureProject extends StatelessWidget {
                           width: 16.0,
                         ),
                         CustomText(
-                          text: tech3 == null ? "" : tech3,
+                          text: tech3,
                           textsize: 14,
                           color: Colors.grey,
                           letterSpacing: 1.75,
@@ -152,7 +153,7 @@ class FeatureProject extends StatelessWidget {
                       children: [
                         IconButton(
                           icon: FaIcon(FontAwesomeIcons.github),
-                          color: Colors.white.withOpacity(0.3),
+                          color: Colors.white.withValues(alpha: 0.3),
                           onPressed: ontab,
                         ),
                       ],
